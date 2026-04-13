@@ -9,7 +9,7 @@ namespace Elphin\IcoFileLoader;
  */
 class GdRenderer implements RendererInterface
 {
-    public function render(IconImage $img, array $opts = null)
+    public function render(IconImage $img, ?array $opts = null)
     {
         $opts = $this->initOptions($img, $opts);
 

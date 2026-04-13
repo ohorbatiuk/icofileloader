@@ -27,7 +27,7 @@ class IcoFileService
      * @param RendererInterface|null $renderer
      * @param ParserInterface|null $parser
      */
-    public function __construct(RendererInterface $renderer = null, ParserInterface $parser = null)
+    public function __construct(?RendererInterface $renderer = null, ?ParserInterface $parser = null)
     {
         $this->parser = $parser ?: new IcoParser();
         $this->renderer = $renderer ?: new GdRenderer();
@@ -56,7 +56,7 @@ class IcoFileService
      * @throws \DomainException if icon does not contain any images.
      * @throws \InvalidArgumentException if file is not found or is invalid.
      */
-    public function extractIcon($dataOrFile, $w, $h, array $opts = null)
+    public function extractIcon($dataOrFile, $w, $h, ?array $opts = null)
     {
         $icon = $this->from($dataOrFile);
         $image = $icon->findBestForSize($w, $h);
@@ -85,7 +85,7 @@ class IcoFileService
      *                            the result is whatever that renderer returns.
      * @throws \InvalidArgumentException if IconImage or options are invalid.
      */
-    public function renderImage(IconImage $image, $w = null, $h = null, array $opts = null)
+    public function renderImage(IconImage $image, $w = null, $h = null, ?array $opts = null)
     {
         $opts = is_array($opts) ? $opts : [];
         $opts['w'] = $w;
