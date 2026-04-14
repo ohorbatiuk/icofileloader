@@ -1,5 +1,5 @@
 {
-    "name": "lordelph/icofileloader",
+    "name": "ohorbatiuk/icofileloader",
     "description": "High quality PHP package for reading and converting any .ico icon file, particularly website favicons",
     "keywords": ["ico", "icon", "favicon", "extract", "load", "convert"],
     "homepage": "http://icofileloader.dixo.net/",
